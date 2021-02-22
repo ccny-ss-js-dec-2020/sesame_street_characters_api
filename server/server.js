@@ -28,6 +28,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json'}));
 
+//middleware that connects your imported routes to the routes of your application
+app.use('/', routes);
+
 //this is how you set the port number in order to have your app work with heroku
 //this is saying "if there is an environment variable called PORT, then use that"
 //if there is not an environment variable called PORT, then use 3000 as the port number
