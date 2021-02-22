@@ -10,8 +10,7 @@ const sesame_street_characters = require('../data/characters.js');
 var router = express.Router();
 
 router.get('/characters', function(req, res){
-	const response = JSON.stringify({success: true, data: sesame_street_characters})
-	res.json(response);
+	res.json({success: true, data: sesame_street_characters});
 });
 
 //exporting routes to be imported in our server.js
